@@ -3,9 +3,9 @@ import logo from '../assets/images/logo.png'
 
 const Navbar = () => {
   return (
-    <nav className='px-[5%] pt-[2%] pb-[2%] flex justify-between' style={{fontFamily:"Poppins",fontWeight:"600"}}>
+    <nav className='px-[5%] pt-[2%] pb-[2%] flex justify-between'>
       <img src={logo} className='w-[10%]'></img>
-      <div className='flex w-[60%] pt-2 justify-between'>
+      <div className='flex w-[60%] pt-2 justify-between font-semibold text-[2.5vh] max-md:text-[1.5vh] max-sm:text-[1vh]'>
         <div className='text-[#663259]'>Home</div>
         <div>|</div>
         <div className='text-[#8E8FA5]'>About Us</div>

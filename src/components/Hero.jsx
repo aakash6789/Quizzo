@@ -3,10 +3,12 @@ import maskbg from "../assets/images/maskbg.png";
 import image1 from "../assets/images/image1.png";
 import mail from "../assets/images/mail.png";
 import password from "../assets/images/password.png";
+import apple_icon from "../assets/images/apple_icon.png"
+import google_icon from "../assets/images/gicon.png"
 const Hero = () => {
   return (
     <div className="relative flex">
-      <img src={maskbg} className="absolute w-full -z-10"></img>
+      <img src={maskbg} className="absolute w-full h-[100%] -z-10"></img>
       <div className="mr-auto border rounded-xl w-[25%] mt-[9%]  text-[#334155] ml-[5%] bg-white px-[2%]">
         <div className="flex text-[2vh] bg-[#E2E8F0] justify-between w-[full] mx-auto py-[1%] mt-[10%] border rounded-xl">
           <button className="bg-white border rounded-xl w-[50%]">Login</button>
@@ -51,9 +53,15 @@ const Hero = () => {
             <div> or login with </div>
             <hr className="bg-[#CBD5E1] w-[30%] mt-[6px]"></hr>
         </div>
-        <div className="flex text-white  justify-between mt-[3%] max-sm:w-full max-sm:px-[28%]  max-sm:mt-[10%] w-[20%]  ">
-          {/* <button className='w-[60%] max-sm:w-[50%] px-[3%]'><img src={Play1}></img></button>
-         <button className='w-[60%] max-sm:w-[50%] px-[3%]'><img src={Play2}></img></button> */}
+        <div className="flex  text-[#64748B] text-[1vh] px-[15%]  justify-between mt-[3%] ">
+          <button className='w-[full] border-[#c8c8c9] rounded-2xl border-[1px] flex items-center max-sm:w-[50%] p-2'>
+  <img className="w-[20%] mr-2" src={google_icon} alt="Google icon"></img>
+  <div>Google</div>
+</button>
+          <button className='w-[full] ml-[30%] border-[#c8c8c9] rounded-2xl border-[1px] flex items-center max-sm:w-[50%] p-2'>
+  <img className="w-[20%] mr-2" src={apple_icon} alt="Google icon"></img>
+  <div>Apple</div>
+</button>
         </div>
       </div>
 
