@@ -9,16 +9,25 @@ const ScienceQuiz = () => {
     const [data,setData]=useState([]);
     const [optionData,setOptionData]=useState([]);
     
-    useEffect(()=>{
-        const getData=axios.get('https://opentdb.com/api.php?amount=10&category=17&difficulty=medium&type=multiple&encode=url3986').then(res=>{
-            console.log(res.data.results);
-            setData(res.data.results);
-            setOptionData([...res.data.results[questionNo].incorrect_answers,res.data.results[questionNo].correct_answer]); 
-            console.log(optionData);
-        }) .catch(err => {
-            console.log("Error while fetching question:", err);
-          });
-    },[questionNo])  
+    useEffect(() => {
+      const fetchData = async () => {
+        try {
+          const response = await axios.get('https://opentdb.com/api.php?amount=10&category=17&difficulty=medium&type=multiple&encode=url3986');
+          setData(response.data.results);
+          if (response.data.results && response.data.results.length > 0) {
+            setOptionData([
+              ...response.data.results[questionNo].incorrect_answers,
+              response.data.results[questionNo].correct_answer
+            ]);
+          }
+        } catch (error) {
+          console.error("Error while fetching question:", error);
+        }
+      };
+    
+      fetchData();
+    
+    }, [questionNo]);
 
 
 function convert(str){
@@ -26,7 +35,7 @@ function convert(str){
 }
   return (
     <div className='text-black '>
-      {data && optionData && <div className=' ml-[5%] mt-[10%]'>
+      {data.length>0 ? <div className=' ml-[5%] mt-[10%]'>
         <h1 className='text-[#191D63] font-semibold'>{convert(data[questionNo].question).toUpperCase()}</h1> 
         <div>
         <div className='bg-[#F4F3F6] hover:bg-[#45C486] hover:text-white hover:cursor-pointer rounded-xl py-[1%] mt-[3%] w-[30%]  px-[3%] flex items-center text-black font-semibold'>
@@ -51,7 +60,7 @@ function convert(str){
   </div>
 </div>
         </div>
-        </div>}
+        </div> : <h1>Loading ...</h1>}
     </div>
   )
 }
