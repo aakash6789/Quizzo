@@ -13,9 +13,9 @@ const Footer = () => {
        
         <div className='flex justify-between ml-[10%]'>
         <div className='flex-col justify-between mt-[5%]'>
-            <div id='foot_head' className='xl:text-[3vh]  text-[#7951F9]'>Content...</div>
+            <div id='foot_head' className='xl:text-[3vh]  text-[#7951F9]'>Feedback</div>
             <div id='foot_tag' className='text-[2vh] font-medium xl:text-[2vh] h-auto mt-[10%] text-[#3E3E3E]'>
-            <p className='mt-2'>Got questions? Reach us at hey@email.com</p>
+            <p className='mt-2'>Got questions? Reach us at quizzo@email.com</p>
             </div>
             </div>
             </div>
