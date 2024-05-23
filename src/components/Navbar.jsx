@@ -10,15 +10,21 @@ const Navbar = () => {
   color: isActive?'#663259':'#8E8FA5'
 })}><div className=''>Home</div></NavLink>
         <div>|</div>
-        <div className='text-[#8E8FA5]'>About Us</div>
+        <NavLink to='/about-us' style={({ isActive }) => ({
+  color: isActive?'#663259':'#8E8FA5'
+})}><div className=''>About us</div></NavLink>
         <div>|</div>
         <NavLink to='/subscriptions' style={({ isActive }) => ({
   color: isActive?'#663259':'#8E8FA5'
 })}><div className=''>Subscription</div></NavLink>
         <div>|</div>
-        <div className='text-[#75768E]'>Privacy Policy</div>
+        <NavLink to='/privacy-policy' style={({ isActive }) => ({
+  color: isActive?'#663259':'#8E8FA5'
+})}><div className=''>Privacy Policy</div></NavLink>
         <div>|</div>
-        <div className='text-[#75768E]'>Terms & conditions</div>
+        <NavLink to='/terms-and-conditions' style={({ isActive }) => ({
+  color: isActive?'#663259':'#8E8FA5'
+})}><div className=''>Terms and conditions</div></NavLink>
       </div>
     </nav>
   )

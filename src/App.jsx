@@ -9,6 +9,8 @@ import Subscriptions from "./components/Subscriptions.jsx"
 import ScienceQuiz from "./components/ScienceQuiz.jsx"
 import GeoQuiz from "./components/GeoQuiz.jsx"
 import HistoryQuiz from "./components/HistoryQuiz.jsx"
+import PrivacyPolicy from "./components/PrivacyPolicy.jsx"
+import TermsAndConditions from "./components/TermsAndConditions.jsx"
 
 import {
   RouterProvider,
@@ -37,6 +39,9 @@ const router = createBrowserRouter(
       <Route path="/subscriptions" element={<Subscriptions/>} />
       <Route path="/geography-quiz" element={<GeoQuiz/>} />
       <Route path="/history-quiz" element={<HistoryQuiz/>} />
+      <Route path="/privacy-policy" element={<PrivacyPolicy/>} />
+      <Route path="/terms-and-conditions" element={<TermsAndConditions/>} />
+      <Route path="/about-us" element={<About/>} />
      
     </Route>
   )
